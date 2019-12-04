@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:clipChildren="false"
         android:clipToPadding="false"
         app:slCornerRadius="@dimen/defaultMenuDropShadowCornerRadius"
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/selector_light_theme"
-                android:gravity="center_vertical|left"
+                android:gravity="center_vertical|start"
                 android:onClick="onClick"
                 >
 
@@ -49,8 +49,8 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:includeFontPadding="false"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="32dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="32dp"
                     android:singleLine="true"
                     android:text="@string/refresh"
                     android:textColor="@color/finestBlack"
@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/selector_light_theme"
-                android:gravity="center_vertical|left"
+                android:gravity="center_vertical|start"
                 android:onClick="onClick"
                 >
 
@@ -73,8 +73,8 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:includeFontPadding="false"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="32dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="32dp"
                     android:singleLine="true"
                     android:text="@string/find"
                     android:textColor="@color/finestBlack"
@@ -87,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/selector_light_theme"
-                android:gravity="center_vertical|left"
+                android:gravity="center_vertical|start"
                 android:onClick="onClick"
                 >
 
@@ -97,8 +97,8 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:includeFontPadding="false"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="32dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="32dp"
                     android:singleLine="true"
                     android:text="@string/share_via"
                     android:textColor="@color/finestBlack"
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/selector_light_theme"
-                android:gravity="center_vertical|left"
+                android:gravity="center_vertical|start"
                 android:onClick="onClick"
                 >
 
@@ -121,8 +121,8 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:includeFontPadding="false"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="32dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="32dp"
                     android:singleLine="true"
                     android:text="@string/copy_link"
                     android:textColor="@color/finestBlack"
@@ -135,7 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/selector_light_theme"
-                android:gravity="center_vertical|left"
+                android:gravity="center_vertical|start"
                 android:onClick="onClick"
                 >
 
@@ -145,8 +145,8 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:includeFontPadding="false"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="32dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="32dp"
                     android:singleLine="true"
                     android:text="@string/open_with"
                     android:textColor="@color/finestBlack"

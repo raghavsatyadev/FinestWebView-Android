@@ -162,23 +162,23 @@ public class FinestWebViewActivity extends AppCompatActivity
 
     protected boolean showMenuRefresh;
 
-    protected int stringResRefresh;
+    protected String stringRefresh;
 
     protected boolean showMenuFind;
 
-    protected int stringResFind;
+    protected String stringFind;
 
     protected boolean showMenuShareVia;
 
-    protected int stringResShareVia;
+    protected String stringShareVia;
 
     protected boolean showMenuCopyLink;
 
-    protected int stringResCopyLink;
+    protected String stringCopyLink;
 
     protected boolean showMenuOpenWith;
 
-    protected int stringResOpenWith;
+    protected String stringOpenWith;
 
     protected int animationCloseEnter;
 
@@ -186,7 +186,7 @@ public class FinestWebViewActivity extends AppCompatActivity
 
     protected boolean backPressToClose;
 
-    protected int stringResCopiedToClipboard;
+    protected String stringCopiedToClipboard;
 
     protected Boolean webViewSupportZoom;
 
@@ -472,19 +472,19 @@ public class FinestWebViewActivity extends AppCompatActivity
                     : getResources().getDimension(R.dimen.defaultMenuTextPaddingRight);
 
             showMenuRefresh = builder.showMenuRefresh != null ? builder.showMenuRefresh : true;
-            stringResRefresh =
-                    builder.stringResRefresh != null ? builder.stringResRefresh : R.string.refresh;
+            stringRefresh =
+                    builder.stringRefresh != null ? builder.stringRefresh : getString(R.string.refresh);
             showMenuFind = builder.showMenuFind != null ? builder.showMenuFind : false;
-            stringResFind = builder.stringResFind != null ? builder.stringResFind : R.string.find;
+            stringFind = builder.stringFind != null ? builder.stringFind : getString(R.string.find);
             showMenuShareVia = builder.showMenuShareVia != null ? builder.showMenuShareVia : true;
-            stringResShareVia =
-                    builder.stringResShareVia != null ? builder.stringResShareVia : R.string.share_via;
+            stringShareVia =
+                    builder.stringShareVia != null ? builder.stringShareVia : getString(R.string.share_via);
             showMenuCopyLink = builder.showMenuCopyLink != null ? builder.showMenuCopyLink : true;
-            stringResCopyLink =
-                    builder.stringResCopyLink != null ? builder.stringResCopyLink : R.string.copy_link;
+            stringCopyLink =
+                    builder.stringCopyLink != null ? builder.stringCopyLink : getString(R.string.copy_link);
             showMenuOpenWith = builder.showMenuOpenWith != null ? builder.showMenuOpenWith : true;
-            stringResOpenWith =
-                    builder.stringResOpenWith != null ? builder.stringResOpenWith : R.string.open_with;
+            stringOpenWith =
+                    builder.stringOpenWith != null ? builder.stringOpenWith : getString(R.string.open_with);
 
             animationCloseEnter = builder.animationCloseEnter != null ? builder.animationCloseEnter
                     : R.anim.modal_activity_close_enter;
@@ -492,9 +492,9 @@ public class FinestWebViewActivity extends AppCompatActivity
                     : R.anim.modal_activity_close_exit;
 
             backPressToClose = builder.backPressToClose != null ? builder.backPressToClose : false;
-            stringResCopiedToClipboard =
-                    builder.stringResCopiedToClipboard != null ? builder.stringResCopiedToClipboard
-                            : R.string.copied_to_clipboard;
+            stringCopiedToClipboard =
+                    builder.stringCopiedToClipboard != null ? builder.stringCopiedToClipboard
+                            : getString(R.string.copied_to_clipboard);
 
             webViewSupportZoom = builder.webViewSupportZoom;
             webViewMediaPlaybackRequiresUserGesture = builder.webViewMediaPlaybackRequiresUserGesture;
@@ -987,7 +987,7 @@ public class FinestWebViewActivity extends AppCompatActivity
             menuRefresh.setVisibility(showMenuRefresh ? View.VISIBLE : View.GONE);
             menuRefresh.setBackgroundResource(menuSelector);
             menuRefresh.setGravity(menuTextGravity);
-            menuRefreshTv.setText(stringResRefresh);
+            menuRefreshTv.setText(stringRefresh);
             menuRefreshTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize);
             menuRefreshTv.setTypeface(TypefaceHelper.get(this, menuTextFont));
             menuRefreshTv.setTextColor(menuTextColor);
@@ -996,7 +996,7 @@ public class FinestWebViewActivity extends AppCompatActivity
             menuFind.setVisibility(showMenuFind ? View.VISIBLE : View.GONE);
             menuFind.setBackgroundResource(menuSelector);
             menuFind.setGravity(menuTextGravity);
-            menuFindTv.setText(stringResFind);
+            menuFindTv.setText(stringFind);
             menuFindTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize);
             menuFindTv.setTypeface(TypefaceHelper.get(this, menuTextFont));
             menuFindTv.setTextColor(menuTextColor);
@@ -1005,7 +1005,7 @@ public class FinestWebViewActivity extends AppCompatActivity
             menuShareVia.setVisibility(showMenuShareVia ? View.VISIBLE : View.GONE);
             menuShareVia.setBackgroundResource(menuSelector);
             menuShareVia.setGravity(menuTextGravity);
-            menuShareViaTv.setText(stringResShareVia);
+            menuShareViaTv.setText(stringShareVia);
             menuShareViaTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize);
             menuShareViaTv.setTypeface(TypefaceHelper.get(this, menuTextFont));
             menuShareViaTv.setTextColor(menuTextColor);
@@ -1014,7 +1014,7 @@ public class FinestWebViewActivity extends AppCompatActivity
             menuCopyLink.setVisibility(showMenuCopyLink ? View.VISIBLE : View.GONE);
             menuCopyLink.setBackgroundResource(menuSelector);
             menuCopyLink.setGravity(menuTextGravity);
-            menuCopyLinkTv.setText(stringResCopyLink);
+            menuCopyLinkTv.setText(stringCopyLink);
             menuCopyLinkTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize);
             menuCopyLinkTv.setTypeface(TypefaceHelper.get(this, menuTextFont));
             menuCopyLinkTv.setTextColor(menuTextColor);
@@ -1023,7 +1023,7 @@ public class FinestWebViewActivity extends AppCompatActivity
             menuOpenWith.setVisibility(showMenuOpenWith ? View.VISIBLE : View.GONE);
             menuOpenWith.setBackgroundResource(menuSelector);
             menuOpenWith.setGravity(menuTextGravity);
-            menuOpenWithTv.setText(stringResOpenWith);
+            menuOpenWithTv.setText(stringOpenWith);
             menuOpenWithTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, menuTextSize);
             menuOpenWithTv.setTypeface(TypefaceHelper.get(this, menuTextFont));
             menuOpenWithTv.setTextColor(menuTextColor);
@@ -1145,13 +1145,13 @@ public class FinestWebViewActivity extends AppCompatActivity
             sendIntent.setAction(Intent.ACTION_SEND);
             sendIntent.putExtra(Intent.EXTRA_TEXT, webView.getUrl());
             sendIntent.setType("text/plain");
-            startActivity(Intent.createChooser(sendIntent, getResources().getString(stringResShareVia)));
+            startActivity(Intent.createChooser(sendIntent, stringShareVia));
 
             hideMenu();
         } else if (viewId == R.id.menuCopyLink) {
             ClipboardManagerUtil.setText(webView.getUrl());
 
-            Snackbar snackbar = Snackbar.make(coordinatorLayout, getString(stringResCopiedToClipboard),
+            Snackbar snackbar = Snackbar.make(coordinatorLayout, stringCopiedToClipboard,
                     Snackbar.LENGTH_LONG);
             View snackbarView = snackbar.getView();
             snackbarView.setBackgroundColor(toolbarColor);

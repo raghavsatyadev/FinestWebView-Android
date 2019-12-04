@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="refresh">Rafraîchir</string>
+    <string name="find">Trouver</string>
+    <string name="share_via">Partage via</string>
+    <string name="copy_link">Copier le lien</string>
+    <string name="open_with">Ouvrir avec</string>
+    <string name="copied_to_clipboard">Copié dans le presse-papier</string>
+</resources>

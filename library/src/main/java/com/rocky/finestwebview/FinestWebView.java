@@ -135,25 +135,27 @@ public class FinestWebView {
 
         protected Float menuTextPaddingRight;
 
+        protected String stringCopiedToClipboard;
+
         protected Boolean showMenuRefresh;
 
-        protected Integer stringResRefresh;
+        protected String stringRefresh;
 
         protected Boolean showMenuFind;
 
-        protected Integer stringResFind;
+        protected String stringFind;
 
         protected Boolean showMenuShareVia;
 
-        protected Integer stringResShareVia;
+        protected String stringShareVia;
 
         protected Boolean showMenuCopyLink;
 
-        protected Integer stringResCopyLink;
+        protected String stringCopyLink;
 
         protected Boolean showMenuOpenWith;
 
-        protected Integer stringResOpenWith;
+        protected String stringOpenWith;
 
         protected Integer animationOpenEnter = R.anim.modal_activity_open_enter;
 
@@ -164,8 +166,6 @@ public class FinestWebView {
         protected Integer animationCloseExit;
 
         protected Boolean backPressToClose;
-
-        protected Integer stringResCopiedToClipboard;
 
         protected Boolean webViewSupportZoom;
 
@@ -689,18 +689,68 @@ public class FinestWebView {
             return this;
         }
 
-        public Builder stringResRefresh(@StringRes int stringResRefresh) {
-            this.stringResRefresh = stringResRefresh;
-            return this;
-        }
-
         public Builder showMenuFind(boolean showMenuFind) {
             this.showMenuFind = showMenuFind;
             return this;
         }
 
-        public Builder stringResFind(@StringRes int stringResFind) {
-            this.stringResFind = stringResFind;
+        public Builder stringRefresh(String stringRefresh) {
+            this.stringRefresh = stringRefresh;
+            return this;
+        }
+
+        public Builder stringRefresh(@StringRes int resRefresh) {
+            this.stringRefresh = context.getString(resRefresh);
+            return this;
+        }
+
+        public Builder stringFind(String stringFind) {
+            this.stringFind = stringFind;
+            return this;
+        }
+
+        public Builder stringFind(@StringRes int resFind) {
+            this.stringFind = context.getString(resFind);
+            return this;
+        }
+
+        public Builder stringShareVia(String stringShareVia) {
+            this.stringShareVia = stringShareVia;
+            return this;
+        }
+
+        public Builder stringShareVia(@StringRes int resShareVia) {
+            this.stringShareVia = context.getString(resShareVia);
+            return this;
+        }
+
+        public Builder stringCopyLink(String stringCopyLink) {
+            this.stringCopyLink = stringCopyLink;
+            return this;
+        }
+
+        public Builder stringCopyLink(@StringRes int resCopyLink) {
+            this.stringCopyLink = context.getString(resCopyLink);
+            return this;
+        }
+
+        public Builder stringOpenWith(String stringOpenWith) {
+            this.stringOpenWith = stringOpenWith;
+            return this;
+        }
+
+        public Builder stringOpenWith(@StringRes int resOpenWith) {
+            this.stringOpenWith = context.getString(resOpenWith);
+            return this;
+        }
+
+        public Builder stringCopiedToClipboard(String stringCopiedToClipboard) {
+            this.stringCopiedToClipboard = stringCopiedToClipboard;
+            return this;
+        }
+
+        public Builder stringCopiedToClipboard(@StringRes int resCopiedToClipboard) {
+            this.stringCopiedToClipboard = context.getString(resCopiedToClipboard);
             return this;
         }
 
@@ -709,28 +759,13 @@ public class FinestWebView {
             return this;
         }
 
-        public Builder stringResShareVia(@StringRes int stringResShareVia) {
-            this.stringResShareVia = stringResShareVia;
-            return this;
-        }
-
         public Builder showMenuCopyLink(boolean showMenuCopyLink) {
             this.showMenuCopyLink = showMenuCopyLink;
             return this;
         }
 
-        public Builder stringResCopyLink(@StringRes int stringResCopyLink) {
-            this.stringResCopyLink = stringResCopyLink;
-            return this;
-        }
-
         public Builder showMenuOpenWith(boolean showMenuOpenWith) {
             this.showMenuOpenWith = showMenuOpenWith;
-            return this;
-        }
-
-        public Builder stringResOpenWith(@StringRes int stringResOpenWith) {
-            this.stringResOpenWith = stringResOpenWith;
             return this;
         }
 
@@ -756,11 +791,6 @@ public class FinestWebView {
 
         public Builder backPressToClose(boolean backPressToClose) {
             this.backPressToClose = backPressToClose;
-            return this;
-        }
-
-        public Builder stringResCopiedToClipboard(@StringRes int stringResCopiedToClipboard) {
-            this.stringResCopiedToClipboard = stringResCopiedToClipboard;
             return this;
         }
 
