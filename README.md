@@ -1,3 +1,7 @@
+# Note
+* The sole owner of this project is <a href="https://github.com/TheFinestArtist" target="_blank">Leonardo Taehwan Kim (TheFinestArtist)</a>
+* I have just upgraded the whole project to **AndroidX** and to newer gradle
+
 # FinestWebView
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
