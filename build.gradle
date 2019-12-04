@@ -15,8 +15,8 @@ ext {
     APK_NAME = "FinestWebView"
     targetSdk = 29
     minSdk = 19
-    libraryVersion = "2.0.0"
-    libraryVersionCode = 10
+    libraryVersion = "2.0.1"
+    libraryVersionCode = 11
 }
 allprojects {
     repositories {

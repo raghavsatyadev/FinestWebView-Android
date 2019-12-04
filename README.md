@@ -262,15 +262,15 @@ menuTextPaddingRight(int menuTextPaddingRight);
 menuTextPaddingRightRes(@DimenRes int menuTextPaddingRight);
 
 showMenuRefresh(boolean showMenuRefresh);
-stringResRefresh(@StringRes int stringResRefresh);
+stringRefresh(@StringRes int stringRefresh);
 showMenuFind(boolean showMenuFind);
-stringResFind(@StringRes int stringResFind);
+stringFind(@StringRes int stringFind);
 showMenuShareVia(boolean showMenuShareVia);
-stringResShareVia(@StringRes int stringResShareVia);
+stringShareVia(@StringRes int stringShareVia);
 showMenuCopyLink(boolean showMenuCopyLink);
-stringResCopyLink(@StringRes int stringResCopyLink);
+stringCopyLink(@StringRes int stringCopyLink);
 showMenuOpenWith(boolean showMenuOpenWith);
-stringResOpenWith(@StringRes int stringResOpenWith);
+stringOpenWith(@StringRes int stringOpenWith);
 ```
 
 #### More Options
@@ -280,7 +280,7 @@ setCustomAnimations(@AnimRes int animationOpenEnter,
                     @AnimRes int animationCloseEnter,
                     @AnimRes int animationCloseExit)
 backPressToClose(boolean backPressToClose);
-stringResCopiedToClipboard(@StringRes int stringResCopiedToClipboard);
+stringCopiedToClipboard(@StringRes int stringCopiedToClipboard);
 ```
 
 #### WebView Options
@@ -463,11 +463,11 @@ You can use your own String resources to translate strings.
 
 ```java
 new FinestWebView.Builder(activity)
-    .stringResCopiedToClipboard(R.string.copied_to_clipboard)
-    .stringResRefresh(R.string.refresh)
-    .stringResShareVia(R.string.share_via)
-    .stringResCopyLink(R.string.copy_link)
-    .stringResOpenWith(R.string.open_with)
+    .stringCopiedToClipboard(R.string.copied_to_clipboard)
+    .stringRefresh(R.string.refresh)
+    .stringShareVia(R.string.share_via)
+    .stringCopyLink(R.string.copy_link)
+    .stringOpenWith(R.string.open_with)
     .show(url);
 ```
 
