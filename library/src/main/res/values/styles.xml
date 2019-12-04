@@ -1,10 +1,18 @@
 <resources>
 
-  <style name="FinestWebViewTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="FinestWebViewTheme" parent="Theme.MaterialComponents.NoActionBar">
     <item name="colorPrimary">@color/finestWhite</item>
+
+        <item name="colorPrimaryVariant">@color/finestGray</item>
     <item name="colorPrimaryDark">@color/finestGray</item>
-    <item name="colorAccent">@color/finestBlack</item>
-    <item name="android:textColorPrimary">@color/finestBlack</item>
+
+        <item name="colorSecondary">@color/finestBlack</item>
+        <item name="colorSecondaryVariant">@color/finestBlack</item>
+
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <item name="android:textColorPrimary">@color/finestBlack</item>
     <item name="android:textColorSecondary">@color/finestSilver</item>
     <item name="windowActionModeOverlay">true</item>
   </style>
@@ -14,11 +22,19 @@
     <item name="android:windowFullscreen">true</item>
   </style>
 
-  <style name="FinestWebViewTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="FinestWebViewTheme.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
     <item name="colorPrimary">@color/finestWhite</item>
+
+        <item name="colorPrimaryVariant">@color/finestGray</item>
     <item name="colorPrimaryDark">@color/finestGray</item>
-    <item name="colorAccent">@color/finestBlack</item>
-    <item name="android:textColorPrimary">@color/finestBlack</item>
+
+        <item name="colorSecondary">@color/finestBlack</item>
+        <item name="colorSecondaryVariant">@color/finestBlack</item>
+
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <item name="android:textColorPrimary">@color/finestBlack</item>
     <item name="android:textColorSecondary">@color/finestSilver</item>
     <item name="windowActionModeOverlay">true</item>
   </style>

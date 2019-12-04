@@ -1,16 +1,19 @@
 package com.thefinestartist.finestwebview.views;
 
 import android.content.Context;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
+
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.thefinestartist.converters.UnitConverter;
 
 /**
  * Created by TheFinestArtist on 3/12/16.
  */
+@SuppressWarnings("unused")
 public class CustomSwipeToRefresh extends SwipeRefreshLayout {
 
   private static final int SCROLL_BUFFER_DIMEN = 1;

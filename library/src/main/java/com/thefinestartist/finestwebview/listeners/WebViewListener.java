@@ -3,6 +3,7 @@ package com.thefinestartist.finestwebview.listeners;
 /**
  * Created by TheFinestArtist on 1/26/16.
  */
+@SuppressWarnings({"WeakerAccess", "unused"})
 public abstract class WebViewListener {
 
   public void onProgressChanged(int progress) {
