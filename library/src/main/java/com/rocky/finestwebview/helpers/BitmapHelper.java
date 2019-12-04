@@ -36,12 +36,12 @@ public class BitmapHelper {
 
     Bitmap coloredBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
     coloredBitmap.setPixels(pixels, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(),
-        bitmap.getHeight());
+            bitmap.getHeight());
     return coloredBitmap;
   }
 
   public static Bitmap getColoredBitmap(@NonNull Context context, @DrawableRes int drawableRes,
-      @ColorInt int color) {
+                                        @ColorInt int color) {
     Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), drawableRes);
     return getColoredBitmap(bitmap, color);
   }
@@ -58,8 +58,8 @@ public class BitmapHelper {
     bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
     for (int y = 0; y < height; y++) {
       int gradientAlpha = (int) ((float) alpha * (float) (height - y) * (float) (height - y)
-          / (float) height
-          / (float) height);
+              / (float) height
+              / (float) height);
       for (int x = 0; x < width; x++) {
         pixels[x + y * width] = Color.argb(gradientAlpha, red, green, blue);
       }

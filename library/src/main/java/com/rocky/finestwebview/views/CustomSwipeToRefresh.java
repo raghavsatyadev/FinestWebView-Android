@@ -16,32 +16,34 @@ import com.thefinestartist.converters.UnitConverter;
 @SuppressWarnings("unused")
 public class CustomSwipeToRefresh extends SwipeRefreshLayout {
 
-  private static final int SCROLL_BUFFER_DIMEN = 1;
-  private static int scrollBuffer;
-  private WebView webView;
+    private static final int SCROLL_BUFFER_DIMEN = 1;
 
-  public CustomSwipeToRefresh(Context context) {
-    super(context);
-  }
+    private static int scrollBuffer;
 
-  public CustomSwipeToRefresh(Context context, AttributeSet attrs) {
-    super(context, attrs);
-  }
+    private WebView webView;
 
-  private void initializeBuffer() {
-    scrollBuffer = UnitConverter.dpToPx(SCROLL_BUFFER_DIMEN);
-  }
-
-  @Override
-  public void addView(View child) {
-    super.addView(child);
-    if (child instanceof WebView) {
-      this.webView = (WebView) child;
+    public CustomSwipeToRefresh(Context context) {
+        super(context);
     }
-  }
 
-  @Override
-  public boolean onInterceptTouchEvent(MotionEvent event) {
-    return webView.getScrollY() <= scrollBuffer && super.onInterceptTouchEvent(event);
-  }
+    public CustomSwipeToRefresh(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    private void initializeBuffer() {
+        scrollBuffer = UnitConverter.dpToPx(SCROLL_BUFFER_DIMEN);
+    }
+
+    @Override
+    public void addView(View child) {
+        super.addView(child);
+        if (child instanceof WebView) {
+            this.webView = (WebView) child;
+        }
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent event) {
+        return webView.getScrollY() <= scrollBuffer && super.onInterceptTouchEvent(event);
+    }
 }
