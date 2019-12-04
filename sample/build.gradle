@@ -1,28 +1,66 @@
 apply plugin: 'com.android.application'
-
+if (file('D:\\Work\\Android\\Projects\\Library\\config.gradle').exists()) {
+    apply from: file('D:\\Work\\Android\\Projects\\Library\\config.gradle')
+}
 android {
-    compileSdkVersion 29
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+    compileSdkVersion project.targetSdk
     defaultConfig {
-        applicationId "com.thefinestartist.finestwebview.sample"
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 10
-        versionName "2.0.0"
+        applicationId "com.rocky.finestwebview.sample"
+        minSdkVersion project.minSdk
+        targetSdkVersion project.targetSdk
+        versionCode project.libraryVersionCode
+        versionName project.libraryVersion
+
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            versionNameSuffix = '-release'
+            if (file('D:\\Work\\Android\\Projects\\Library\\config.gradle').exists()) {
+                signingConfig signingConfigs.finestwebview
+            }
+        }
+        debug {
+//            applicationIdSuffix = ".beta"
+            versionNameSuffix = '-debug'
+        }
+        client {
+//            applicationIdSuffix = ".beta"
+            minifyEnabled = true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            versionNameSuffix = '-client'
+            if (file('D:\\Work\\Android\\Projects\\Library\\config.gradle').exists()) {
+                signingConfig signingConfigs.finestwebview
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            if (!variant.getName().equals("debug")) {
+                output.outputFileName = "../" + "${APK_NAME}-${variant.name}-${new Date().format('dd-MM-yy_HH-mm')}.apk"
+            }
+            if (variant.getName().equals('release')) {
+                variant.assembleProvider.get().doLast {
+                    if (variant.mappingFile != null && variant.mappingFile.exists()) {
+                        copy {
+                            from variant.mappingFile
+                            into output.outputFile.parent
+                        }
+                    }
+                }
+            }
         }
     }
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.multidex:multidex:2.0.1'

@@ -4,10 +4,11 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 10
-        versionName "2.0.0"
+        minSdkVersion project.minSdk
+        targetSdkVersion project.targetSdk
+        versionCode project.libraryVersionCode
+        versionName project.libraryVersion
+
         vectorDrawables.useSupportLibrary = true
     }
     compileOptions {
@@ -15,7 +16,29 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+ext {
+    bintrayRepo = 'Maven'
+    bintrayName = 'FinestWebView'
 
+    publishedGroupId = 'com.rocky.finestwebview'
+    libraryName = 'FinestWebView'
+    artifact = 'finestwebview'
+
+    libraryDescription = 'Beautiful and customizable Android Activity that shows web pages within an app.'
+
+    siteUrl = 'https://github.com/raghavsatyadev/FinestWebView-Android'
+    gitUrl = 'https://github.com/raghavsatyadev/FinestWebView-Android.git'
+
+    libraryVersion = rootProject.ext.libraryVersion
+
+    developerId = 'raghav'
+    developerName = 'Raghav Satyadev'
+    developerEmail = 'raghavsatyadev@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.annotation:annotation:1.1.0'
@@ -27,4 +50,7 @@ dependencies {
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'com.thefinestartist:utils:0.9.0'
     annotationProcessor 'com.thefinestartist:compilers:0.9.0'
+}
+if (file('D:\\Work\\Android\\Projects\\Library\\credentials.properties').exists()) {
+    apply from: file('D:\\Work\\Android\\Projects\\Library\\bintray.gradle')
 }

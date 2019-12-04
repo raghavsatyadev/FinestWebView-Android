@@ -1,7 +1,6 @@
 # FinestWebView
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FinestWebView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/2861)
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
-[![API](https://img.shields.io/badge/API-7%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=7)
+[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 #### Beautiful and customizable Android Activity that shows web pages within an app.
@@ -18,28 +17,28 @@
 * Supports Right to Left
 
 ## Screenshots
-<img src="https://github.com/TheFinestArtist/FinestWebView-Android/blob/master/art/screenshots.png?raw=true" width="888">
+<img src="https://github.com/raghavsatyadev/FinestWebView-Android/blob/master/art/screenshots.png?raw=true" width="888">
 
 ### Default theme & Copied to clipboard
-<img src="https://github.com/TheFinestArtist/FinestWebView-Android/blob/master/art/first.png?raw=true" width="888">
+<img src="https://github.com/raghavsatyadev/FinestWebView-Android/blob/master/art/first.png?raw=true" width="888">
 
 ### Back and forward & More options
-<img src="https://github.com/TheFinestArtist/FinestWebView-Android/blob/master/art/second.png?raw=true" width="888">
+<img src="https://github.com/raghavsatyadev/FinestWebView-Android/blob/master/art/second.png?raw=true" width="888">
 
 ## FinestWebView Demo Video - YouTube
 <a href="https://www.youtube.com/watch?v=7qmAqnspjAM" target="_blank">
   <img alt="Youtube"
-       src="https://github.com/TheFinestArtist/FinestWebView-Android/blob/master/art/youtube.png">
+       src="https://github.com/raghavsatyadev/FinestWebView-Android/blob/master/art/youtube.png">
 </a>
 
 
 ## Sample Project
 
-You can download the latest sample APK from this repo here: [sample-release.apk](https://github.com/TheFinestArtist/FinestWebView-Android/blob/master/sample/sample-release.apk?raw=true)
+You can download the latest sample APK from this repo here: [sample-release.apk](https://github.com/raghavsatyadev/FinestWebView-Android/blob/master/sample/sample-release.apk?raw=true)
 
 It's also on Google Play:
 
-<a href="https://play.google.com/store/apps/details?id=com.thefinestartist.finestwebview.sample" target="_blank">
+<a href="https://play.google.com/store/apps/details?id=com.rocky.finestwebview.sample" target="_blank">
   <img alt="Get it on Google Play"
       src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60"/>
 </a>
@@ -50,9 +49,11 @@ It's also on Google Play:
 
 Easily reference the library in your Android projects using this dependency in your module's `build.gradle` file.
 
+Current Version : https://bintray.com/raghavsatyadev/Maven/FinestWebView/_latestVersion
+
 ```java
 dependencies {
-    compile 'com.thefinestartist:finestwebview:1.2.7'
+    implementation 'com.rocky.finestwebview:finestwebview:x.x.x'
 }
 ```
 
@@ -65,7 +66,7 @@ You have to add FinestWebViewActivity in your `AndroidManifest.xml`
 <uses-permission android:name="android.permission.INTERNET" />
 
 <activity
-    android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+    android:name="com.rocky.finestwebview.FinestWebViewActivity"
     android:configChanges="keyboardHidden|orientation|screenSize"
     android:screenOrientation="sensor"
     android:theme="@style/FinestWebViewTheme.Light" />
@@ -99,7 +100,7 @@ You can use your own Theme for FinestWebView. If you want to use pre-defined the
 
 ```xml
 <activity
-    android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+    android:name="com.rocky.finestwebview.FinestWebViewActivity"
     android:theme="@style/AppTheme.NoActionBar" />
 ```
 
@@ -390,7 +391,7 @@ If you enable BuiltInZoomControls `webViewBuiltInZoomControls(true)`, it will au
     <item name="android:windowFullscreen">true</item>
 </style>
 <activity
-    android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+    android:name="com.rocky.finestwebview.FinestWebViewActivity"
     android:theme="@style/AppTheme.NoActionBar.FullScreen" />
 ```
 
@@ -422,7 +423,7 @@ Use configChange, screenOrientation to customize your orientation options
 
 ```xml
 <activity
-    android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+    android:name="com.rocky.finestwebview.FinestWebViewActivity"
     android:configChanges="keyboardHidden|orientation|screenSize"
     android:screenOrientation="sensor"
     android:theme="@style/FinestWebViewTheme" />
