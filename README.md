@@ -53,7 +53,7 @@ It's also on Google Play:
 
 Easily reference the library in your Android projects using this dependency in your module's `build.gradle` file.
 
-Current Version : https://bintray.com/raghavsatyadev/Maven/FinestWebView/_latestVersion
+Current Version : <a href='https://bintray.com/raghavsatyadev/Maven/MoreApps/_latestVersion'><img src='https://api.bintray.com/packages/raghavsatyadev/Maven/MoreApps/images/download.svg'></a>
 
 ```java
 dependencies {
