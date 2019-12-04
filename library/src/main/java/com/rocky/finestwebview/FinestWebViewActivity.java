@@ -362,9 +362,11 @@ public class FinestWebViewActivity extends AppCompatActivity
             // resolve themed attributes
             TypedValue typedValue = new TypedValue();
             TypedArray typedArray = obtainStyledAttributes(typedValue.data, new int[]{
-                    R.attr.colorPrimaryDark, R.attr.colorPrimary, R.attr.colorAccent,
-                    android.R.attr.textColorPrimary, android.R.attr.textColorSecondary,
-                    android.R.attr.selectableItemBackground, android.R.attr.selectableItemBackgroundBorderless
+                    R.attr.colorPrimaryVariant, R.attr.colorPrimary, R.attr.colorSecondary,
+                    R.attr.colorOnPrimary, R.attr.colorOnSecondary,
+                    android.R.attr.selectableItemBackground, R.attr.selectableItemBackgroundBorderless,
+                    R.attr.colorOnPrimary,
+                    R.attr.colorSecondaryVariant, R.attr.colorOnSecondary
             });
             int colorPrimaryDark = typedArray.getColor(0, ContextCompat.getColor(this, R.color.finestGray));
             int colorPrimary = typedArray.getColor(1, ContextCompat.getColor(this, R.color.finestWhite));

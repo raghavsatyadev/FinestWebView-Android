@@ -1,2 +1,2 @@
-./gradlew clean assembleDebug install
-./gradlew bintrayUpload
+gradlew clean assembleDebug install
+gradlew bintrayUpload

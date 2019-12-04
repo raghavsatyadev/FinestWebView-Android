@@ -28,16 +28,6 @@ android {
 //            applicationIdSuffix = ".beta"
             versionNameSuffix = '-debug'
         }
-        client {
-//            applicationIdSuffix = ".beta"
-            minifyEnabled = true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            versionNameSuffix = '-client'
-            if (file('D:\\Work\\Android\\Projects\\Library\\config.gradle').exists()) {
-                signingConfig signingConfigs.finestwebview
-            }
-        }
     }
     compileOptions {
         sourceCompatibility = 1.8
